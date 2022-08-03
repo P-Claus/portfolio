@@ -1,0 +1,222 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 1rem;
+    --color-accent: #ACB992;
+    --color-background: #E9E5D6;
+    --color-text: #362706;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-accent);
+}
+
+a:hover {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.container-fluid {
+    max-width: 55vw;
+}
+
+/* Sections */
+.colored-section {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.white-section {
+    background-color: white;
+    color: var(--color-text);
+}
+
+/****** HERO SECTION ******/
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.hero-square {
+    background-color: var(--color-accent);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 270px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    animation: entrance-left 1s ease 0s 1 normal forwards;
+}
+
+@keyframes entrance-left {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.hero-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.hero-subtitle {
+    font-weight: 400;
+    font-size: .9rem;
+    margin-bottom: 4px;
+}
+
+.hero-icon {
+    color: var(--color-text);
+    font-size: .9rem;
+    
+}
+
+.hero-icon:hover {
+    transform: scale(1.2);
+}
+
+.hero-image {
+    position: relative;
+    bottom: 60px;
+    animation: entrance 1s ease 0s 1 normal forwards;
+}
+
+@keyframes entrance {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.hero-image img {
+    height: 240px;
+    position: relative;
+    bottom: -20px;
+}
+
+
+
+/****** HERO SECTION TABLET DESIGN ******/
+
+@media only screen and (min-width: 480px) {
+    
+    .hero-square {
+        height: 200px;
+        width: 320px;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-icon {
+        font-size: 1rem;
+        margin-right: 2px;
+    }
+    
+    .hero-image img {
+        height: 250px;
+        position: relative;
+        bottom: -10px;
+    }
+
+    
+}
+
+/****** HERO SECTION SMALL LAPTOP DESIGN ******/
+@media only screen and (min-width: 768px) {
+    
+    .hero-square {
+        height: 250px;
+        width: 430px;
+    }
+    
+    .hero-title {
+        font-size: 1.7rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-icon {
+        font-size: 1.1rem;
+    }
+    
+    .hero-image img {
+        height: 310px;
+        position: relative;
+        bottom: 0px
+    }
+    
+}
+
+/****** HERO SECTION DESKTOP DESIGN ******/
+@media only screen and (min-width: 1025px) {
+    
+    .hero-square {
+        height: 270px;
+        width: 500px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 7px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 7px;
+
+    }
+    
+    .hero-icon {
+        font-size: 1.3rem;
+    }
+    
+    .hero-image img {
+        height: 340px;
+        position: relative;
+        bottom: 10px
+    }
+
+    .hero-icons {
+        margin-top: 3px;
+    }
+    
+}
